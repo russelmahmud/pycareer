@@ -1,0 +1,18 @@
+<div class="row category-row-item">
+  {% for book in books %}
+    <div class="col-6 col-md-4 col-lg-2 mb-4">
+      <a href="{{ book.url }}">
+        <img class="img-thumbnail" src="{{ book.cover_url }}"
+          alt="{{ book.title }}">
+      </a>
+      <div class="caption">
+        <h3 class="t-small mb-1" title="{{ book.title }}">
+          <a href="{{ book.url }}">{{ book.title }}</a>
+        </h3>
+        <p class="t-small"><strong class="text-muted">By:&nbsp;</strong><span class="author">{{ book.authors }}</span></p>
+        <p class="t-small"><strong class="list-value t-medium">${{ book.price }} <span class="smaller text-muted">USD</span></strong>&nbsp;</p>
+        <a class="btn btn-outline-success" href="{{ book.amazon_link }}">Buy Now</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

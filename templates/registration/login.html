@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto login form-page">
+        <h1 class="t-large">LogIn to your account</h1>
+        <hr>
+        {% include 'partials/inline_message.html' with messages=messages filter='login' %}
+        <form class="form-vertical form" action="." method="POST">
+          {% csrf_token %}
+          <fieldset>
+            <div class="well">
+              {{ form.non_field_errors }}
+              <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" class="form-control" name="username" placeholder="Enter email">
+                {{ form.username.errors }}
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+                {{ form.password.errors }}
+              </div>
+              <button type="submit" class="btn btn-primary">LogIn</button>
+              <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+          </fieldset>
+        </form>
+        <div class="info t-small">
+          <p><a href="{% url auth_password_reset %}">Forgot your password?</a></p>
+          <p>Don't have an account? <a href="{% url registration_register %}">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

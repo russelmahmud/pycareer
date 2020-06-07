@@ -1,0 +1,115 @@
+{% extends 'event/base.html' %}
+
+{% block meta_tag %}
+  <title>Submit Python Event | PyCareer</title>
+{% endblock %}
+
+{% block extracss %}
+  <link href="/static/css/jquery.datetimepicker.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url event_list %}">Events</a></li>
+    <li class="breadcrumb-item " aria-current="page">Submit New Event</li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block event-content %}
+  <h1 class="title t-large">Submit a python event</h1>
+  <hr>
+  <div class="row">
+    <form class="form-vertical form" action="." method="POST" onkeypress="return event.keyCode != 13;">
+      {% csrf_token %}
+      <fieldset>
+        <div class="col-sm-12">
+          {% include 'partials/inline_message.html' with messages=messages filter='event' %}
+          <div class="well">
+            {{ form.non_field_errors }}
+            <div class="form-group">
+              <label for="name">Event name <span class="required">*</span></label>
+              {{ form.name }}
+              {{ form.name.errors }}
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="start_date">Start date <span class="required">*</span></label>
+                  {{ form.start_date }}
+                  {{ form.start_date.errors }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="end_date">End date <span class="required">*</span></label>
+                  {{ form.end_date }}
+                  {{ form.end_date.errors }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="city">City <span class="required">*</span></label>
+                  {{ form.city }}
+                  {{ form.city.errors }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="state">State, Province or Region</label>
+                  {{ form.state }}
+                  {{ form.state.errors }}
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country">Country <span class="required">*</span></label>
+              {{ form.country }}
+              {{ form.country.errors }}
+            </div>
+            <div class="form-group">
+              <label for="website">Topics</label>
+              {{ form.topics }}
+              {{ form.topics.errors }}
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              {{ form.website }}
+              {{ form.website.errors }}
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              {{ form.description }}
+              {{ form.description.errors }}
+            </div>
+            <button type="submit" class="btn btn-primary hidden-sm">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}
+
+{% block sidebar-content %}
+  {% include 'event/_sidebar_event_list.html' %}
+{% endblock %}
+
+{% block extrajs %}
+  <script src="/static/js/jquery.datetimepicker.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var pickerOptions = {
+        timepicker: false,
+        format:'Y-m-d',
+        closeOnDateSelect: true,
+        scrollInput: false
+      };
+      $('#id_start_date').datetimepicker(pickerOptions);
+      $('#id_end_date').datetimepicker(pickerOptions);
+    });
+  </script>
+{% endblock %}

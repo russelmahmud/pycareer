@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-2 mb-4">
+  {% block breadcrumb %}
+  {% endblock %}
+  <div class="row">
+    <div class="col-md-9">
+      {% block event-content %} {% endblock %}
+    </div>
+    <div class="col-md-3">
+      {% block sidebar-content %}
+      {% include 'event/_sidebar_event_submit.html' %}
+      {% endblock %}
+      <div class="sidebar-content">
+        <hr>
+        <p><a href="{% url event_archives %}"><i class="fa fa-list-ul"></i>&nbsp;Events archive</a></p>
+        <hr>
+      </div>
+      <div class="sidebar-content social t-small">
+        <h3 class="title t-large">Stay up-to-date</h3>
+        <hr>
+        <a href="{% url event_rss %}" rel="nofollow"><i class="fa fa-rss"></i>&nbsp;Subscribe via RSS</a>
+        <a href="https://twitter.com/pycareer"><i class="fa fa-twitter"></i>&nbsp;Follow via Twitter</a>
+        <a href="https://www.facebook.com/pythoncareer"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Like in Facebook</a>
+        <a href="https://www.linkedin.com/company/pycareer/"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;Follow in LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

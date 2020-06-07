@@ -1,0 +1,135 @@
+{% extends 'job/base.html' %}
+
+{% block meta_tag %}
+  <title>Post Python Job | PyCareer</title>
+{% endblock %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="/static/css/simplemde.min.css">
+{% endblock %}
+{% block extrajs %}
+  <script src="/static/js/simplemde.min.js"></script>
+  <script>
+    new SimpleMDE({
+      element: document.getElementById("id_description"),
+      spellChecker: false,
+      toolbar: ['bold', 'italic', 'heading-2', 'unordered-list', 'link', "|", 'preview']
+    });
+  </script>
+{% endblock %}
+
+{% block job-header %} <hr class="topbar"> {% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url job_list %}">Jobs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Create Job</li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block job-content %}
+  <h1 class="title t-large">Submit a python job</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <form class="form form-vertical jobCreate" action="." method="POST" onkeypress="return event.keyCode != 13;">{% csrf_token %}
+        <fieldset>
+          <div class="well">
+            {{ form.non_field_errors }}
+            <div class="form-group">
+              <label for="title">Job Title <span class="required">*</span></label>
+              {{ form.title.errors }}
+              {{ form.title }}
+            </div>
+            <div class="form-group">
+              <label for="description">Job Description <span class="required">*</span></label>
+              <p class="help-block">Describe the responsibilities of this job, required work experience, skills, or education.</p>
+              {{ form.description.errors }}
+              {{ form.description }}
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="city">City <span class="required">*</span></label>
+                  {{ form.city }}
+                  {{ form.city.errors }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="state">State, Province or Region</label>
+                  {{ form.state }}
+                  {{ form.state.errors }}
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country">Country <span class="required">*</span></label>
+              {{ form.country.errors }}
+              {{ form.country }}
+            </div>
+            <div class="form-group">
+              <label for="offer">Will sponsor visa? <span class="required">*</span></label>
+              <p class="help-block">Are you willing to recruit foreigners and sponsor their working visas if necessary?</p>
+              {{ form.will_sponsor.errors }}
+              <label class="radio-inline">
+                <input type="radio" name="will_sponsor" value="True"><strong>Yes</strong>
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="will_sponsor" value="False"><strong>No</strong>
+              </label>
+            </div>
+            <div class="form-group offer hidden">
+              <label for="visas">Which visa(s)</label>
+              {{ form.visas.errors }}
+              {{ form.visas }}
+            </div>
+            <div class="form-group">
+              <label for="company_name">Company <span class="required">*</span></label>
+              {{ form.company_name.errors }}
+              {{ form.company_name }}
+            </div>
+            <div class="form-group">
+              <label for="company_name">About Company</label>
+              {{ form.company_description.errors }}
+              {{ form.company_description }}
+            </div>
+            <div class="form-group">
+              <label for="contact_name">Contact Person</label>
+              {{ form.contact_name.errors }}
+              {{ form.contact_name }}
+            </div>
+            <div class="form-group">
+              <label for="contact_email">Contact Email <span class="required">*</span></label>
+              <p class="help-block">Applications will be sent to this email.</p>
+              {{ form.contact_email.errors }}
+              {{ form.contact_email }}
+            </div>
+            <div class="form-group">
+              <label for="contact_url">Link</label>
+              {{ form.contact_url.errors }}
+              {{ form.contact_url }}
+            </div>
+            <button type="submit" class="btn btn-primary btn-full-width">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block sidebar-content %}
+  <div class="sidebar-content t-small">
+    <hr>
+    <h3 class="title t-large">Latest jobs</h3>
+    <hr>
+    {% for job in jobs %}
+      <a href="{{ job.url }}"><i class="fa fa-circle"></i>&nbsp;&nbsp;{{ job.title }}</a>
+      <br>
+    {% endfor %}
+    <p><b><a href="{% url job_list %}">More ...</a></b> </p>
+  </div>
+{% endblock %}

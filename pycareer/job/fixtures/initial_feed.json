@@ -1,0 +1,26 @@
+[
+  {
+    "model": "job.Feed",
+    "pk": 1,
+    "fields": {
+      "name": "Python.org RSS",
+      "description": "Python jobs from python.org RSS feed",
+      "parser": "python_org_rss",
+      "active": false,
+      "created_at": "2015-10-10 10:30:30",
+      "modified_at": "2015-10-10 10:30:30"
+    }
+  },
+  {
+    "model": "job.Feed",
+    "pk": 2,
+    "fields": {
+      "name": "Python.org HTML",
+      "description": "Python jobs from python.org website",
+      "parser": "python_org_html",
+      "active": false,
+      "created_at": "2015-10-10 10:30:30",
+      "modified_at": "2015-10-10 10:30:30"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{% for event in events %}
+<div class="event">
+  <h2 class="t-medium"><a href="{{ event.url }}">{{ event.name }}</a></h2>
+  <h3 class="t-small"><i class="fa fa-map-marker"></i><strong> {{ event.location }}</strong></h3>
+  <p class="t-small">
+    <span class="event-time"><i class="fa fa-calendar-o"></i> {{ event.start_date|date:"d M, Y" }} -
+      {{ event.end_date|date:"d M, Y" }}</span>
+  </p>
+  {% if event.topics %}
+  <p class="t-small"><i class="fa fa-tags"></i> {{ event.topics }}</p>
+  {% endif %}
+</div>
+{% empty %}
+<br>
+<p class="t-medium">No events found. <a href="{% url event_submit %}">Submit an event.</a></p>
+{% endfor %}

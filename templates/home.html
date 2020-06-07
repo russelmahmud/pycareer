@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="t-xlarge">Build Your Python Career In One Place</h1>
+    <p class="t-medium">Learn, Earn & Contribute</p>
+    <form class="form-inline my-2 my-lg-0 justify-content-center" action="{% url job_list %}" method="GET">
+      <input class="form-control mr-sm-2 home-search-field" type="text" name="q" type="text" placeholder="Search python jobs ..." aria-label="Search">
+      <button class="btn btn-warning my-2 my-sm-0 btn-full-width" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row home-features">
+      <div class="col-md-6">
+        <h2 class="t-large">Latest Jobs</h2>
+        <hr>
+        {% for job in jobs %}
+        <h3 class="t-medium"><a href="{{ job.url }}">{{ job.title }}</a></h3>
+        <p class="t-small"><i class="fa fa-map-marker"></i>&nbsp;{{ job.location }}</p>
+        {% endfor %}
+      </div>
+      <div class="col-md-6">
+        <hr class="d-sm-block d-md-none">
+        <h2 class="t-large">Upcoming Events</h2>
+        <hr>
+        {% for event in events %}
+        <h3 class="t-medium"><a href="{{ event.url }}">{{ event.name }}</a></h3>
+        <p class="t-small"><i class="fa fa-map-marker"></i>&nbsp;{{ event.location }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row home-features">
+      <div class="col-md-12">
+        <hr>
+        <h2 class="t-large">Best Python Books</h2>
+        <hr>
+        {% include "book/_category_list.html" with books=books %}
+      </div>
+    </div>
+    <div class="row home-features mb-4">
+      <div class="col-md-7">
+        <hr>
+          <h2 class="t-large">Python Jobs in Your Country</h2>
+        <hr>
+        <div class="row directory">
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'united_states' %}">United States</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'canada' %}">Canada</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'south_africa' %}">South Africa</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'australia' %}">Australia</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'singapore' %}">Singapore</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'united_kingdom' %}">United Kingdom</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'netherlands' %}">Netherlands</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'new_zealand' %}">New Zealand</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'sweden' %}">Sweden</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'switzerland' %}">Switzerland</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'india' %}">India</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'france' %}">France</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'germany' %}">Germany</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'ireland' %}">Ireland</a><br>
+            <a class="col-6 col-lg-4" href="{% url job_list_co 'israel' %}">Israel</a><br>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <hr>
+        <h2 class="t-large">Follow Us</h2>
+        <hr>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=1067197869987128&autoLogAppEvents=1"></script>
+        <div class="fb-page" data-href="https://www.facebook.com/pythoncareer/"
+          data-height="215"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-hide-cta="true"
+          data-show-facepile="true">
+        </div>
+        <br>
+        <br>
+        <a class="twitter-follow-button"
+          href="https://twitter.com/pycareer"
+          data-show-count="false"
+          data-size="large">Follow @PyCareer</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <br>
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+        <script type="IN/FollowCompany" data-id="7040549"></script>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extrajs %}
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "WebSite",
+    "name" : "PyCareer",
+    "alternateName" : "www.pycareer.com",
+    "url" : "{{ SITE_URL }}"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "url" : "{{ SITE_URL }}",
+    "name": "PyCareer",
+    "logo": "{{ SITE_URL }}/static/img/pycareer-logo.png",
+    "contactPoint" : [{
+      "@type" : "ContactPoint",
+      "telephone" : "+880-1710378515",
+      "contactType" : "customer support",
+      "email": "support(at)pycareer.com"
+    }],
+    "sameAs" : [
+      "https://www.facebook.com/pythoncareer",
+      "https://twitter.com/pycareer"
+    ]
+  }
+  </script>
+{% endblock %}

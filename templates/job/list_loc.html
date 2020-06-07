@@ -1,0 +1,50 @@
+{% extends 'job/base.html' %}
+
+{% block meta_tag %}
+  <title>Python Jobs in {{ country.name }} | PyCareer</title>
+  <meta name="description" content="{{ JOB_COMMON_META }}">
+{% endblock %}
+
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Python Jobs in {{ country.name }}">
+  <meta property="og:url" content="{{ SITE_URL }}{% url job_list_co country.slug %}">
+  <meta name="twitter:url" content="{{ SITE_URL }}{% url job_list_co country.slug %}">
+  <meta name="twitter:title" content="Python Jobs in {{ country.name }}">
+  <meta property="og:description" content="{{ JOB_COMMON_META }}">
+  <meta name="twitter:description" content="{{ JOB_COMMON_META }}">
+{% endblock %}
+
+{% block breadcrumb %}
+  <ol>
+    <li><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a>&nbsp;»</li>
+    <li><a href="{% url job_list %}">Jobs</a>&nbsp;»</li>
+    <li><a href="{% url job_list_co country.slug %}">{{ country.name }}</a></li>
+  </ol>
+{% endblock %}
+
+{% block job-content %}
+  <h1 class="title jobs-title">{{ query|capfirst }} jobs in {{ country.name }}</h1>
+  <hr>
+  <div class="listings">
+    {% if  jobs %}
+      {% include "job/_listing.html" with jobs=jobs %}
+      <nav>
+        <ul class="pager">
+          {% if paginator.has_previous %}
+          <li class="previous"><a href="?q={{ query|urlencode }}&page={{ paginator.previous_page_number }}" rel="nofollow">«&nbsp;Prev</a></li>
+          {% else %}
+          <li class="previous disabled"><a href="javascript:;" rel="nofollow">«&nbsp;Prev</a></li>
+          {% endif %}
+          {% if paginator.has_next %}
+          <li class="next"><a href="?q={{ query|urlencode }}&page={{ paginator.next_page_number }}" rel="nofollow">Next&nbsp;»</a></li>
+          {% else %}
+          <li class="next disabled"><a href="javascript:;" rel="nofollow">Next&nbsp;»</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% else %}
+      <h2>The search "{{ query }}" did not match any jobs</h2>
+    {% endif %}
+  </div>
+{% endblock %}

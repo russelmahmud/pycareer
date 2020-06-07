@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% block job-header %}
+  <div class="jumbotron text-center job">
+    <h3>Search Jobs</h3>
+    <form class="form-inline justify-content-center" action="{% url job_list %}" method="GET" role="search">
+      <input class="form-control home-search-field mr-sm-2" type="text" name="q" type="text" placeholder="e.g. Django, CA" aria-label="Search"  value="{{ query }}">
+      <button class="btn btn-warning my-2 my-sm-0 btn-full-width search-btn" type="submit"><i class="fa fa-search"></i>Search</button>
+    </form>
+  </div>
+  {% endblock %}
+  <div class="container job">
+    {% block breadcrumb %}
+    {%endblock %}
+    <div class="row">
+      <div class="col-md-9">
+        {% block job-content %} {% endblock %}
+      </div>
+      <div class="col-md-3">
+        <a href="{% url job_post %}" class="btn btn-success btn-full-width mt-3">Post Job (FREE)</a>
+        {% block sidebar-content %}
+          <div class="sidebar-content">
+            <hr>
+            <h3 class="title t-large">More jobs</h3>
+            <hr>
+            <div class="row t-small">
+            {% for country in countries %}
+            <a class="col-6 col-md-12" href="{% url job_list_co country.slug %}">
+              <i class="fa fa-flag-o"></i>&nbsp;{{ country.name }}
+            </a>
+            {% endfor %}
+            </div>
+          </div>
+        {% endblock %}
+        <div class="sidebar-content social t-small">
+          <hr>
+          <h3 class="title t-large">Stay up-to-date</h3>
+          <hr>
+          <a href="{% url job_rss %}"><i class="fa fa-rss"></i>&nbsp;Subscribe via RSS</a>
+          <a href="https://www.linkedin.com/company/pycareer/"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;Follow in LinkedIn</a>
+          <a href="https://twitter.com/pycareer"><i class="fa fa-twitter"></i>&nbsp;Follow via Twitter</a>
+          <a href="https://www.facebook.com/pythoncareer"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Like in Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+{% endblock %}

@@ -1,0 +1,9 @@
+ {% if job.contact_name %}
+  <p><i class="fa fa-user"></i>&nbsp;<strong>Contact Name:</strong> {{ job.contact_name }}</p>
+{% endif %}
+{% if job.contact_email %}
+  <p><i class="fa fa-envelope"></i>&nbsp;<strong>Contact Email:</strong> {{ job.contact_email }}</p>
+{% endif %}
+{% if job.contact_url %}
+  <p><i class="fa fa-link"></i>&nbsp;<strong>Website:</strong> <a href="{{ job.contact_url }}" target="_blank">{{ job.contact_url }}</a></p>
+{% endif %}

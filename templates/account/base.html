@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block extracss %}
+  <link href="/static/css/account.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/bootstrap-tagsinput.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-1 account">
+    <nav class="navbar navbar-expand rounded justify-content-center t-medium" style="background-color: #e3f2fd;">
+      <ul class="navbar-nav">
+        {% if request.user.profile.is_recruiter %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url jobs_mine %}">Manage Jobs</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url profile_page %}">My Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url auth_password_change %}">Change Password</a>
+        </li>
+      </ul>
+    </nav>
+    {% block account_content %} {% endblock %}
+  </div>
+  <br>
+{% endblock %}

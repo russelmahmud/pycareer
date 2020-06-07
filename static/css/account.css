@@ -1,0 +1,31 @@
+.account .sidebar h3 {
+  margin: 0;
+}
+.account-title {
+  font-size: 20px;
+  margin-top: 0;
+}
+.account .items {
+  margin-top: 20px;
+}
+.account .item {
+  border: 0;
+  border-bottom: 1px solid #eee;
+  padding: 7px 0;
+}
+.approved {
+  background-color: #5cb85c;
+}
+
+.declined {
+  background-color: #d9534f;
+}
+
+.pending {
+  background-color: #777;
+}
+.btn-archive {
+  color: #fff;
+  background-color: #777;
+  border-color: #777;
+}

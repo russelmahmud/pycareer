@@ -1,0 +1,9 @@
+<div class="sidebar-content">
+  <hr class="d-sm-block d-md-none">
+  <h3 class="title t-large">Upcoming events</h3>
+  <hr>
+  {% for event in events %}
+  <p class="t-small"><a href="{{ event.url }}"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;{{ event.name }}</a></p>
+  {% endfor %}
+  <p class="t-small"><b><a href="{% url event_list %}">More ...</a></b> </p>
+</div>

@@ -1,0 +1,10 @@
+cron:
+- description: daily job aggregation
+  url: /tasks/aggregate_job/
+  schedule: every 4 hours
+- description: archive old job daily
+  url: /tasks/archive_job/
+  schedule: every day 00:00
+- description: daily event aggregation
+  url: /tasks/extract_events/
+  schedule: every day 00:30

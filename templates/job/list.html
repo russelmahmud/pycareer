@@ -1,0 +1,62 @@
+{% extends 'job/base.html' %}
+{% load markup %}
+
+{% block meta_tag %}
+  <title>Python Jobs | PyCareer</title>
+  <meta name="description" content="{{ JOB_COMMON_META }}">
+{% endblock %}
+
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Python Jobs">
+  <meta property="og:url" content="{{ SITE_URL }}{% url job_list %}">
+  <meta name="twitter:url" content="{{ SITE_URL }}{% url job_list %}">
+  <meta name="twitter:title" content="Python Jobs">
+  <meta property="og:description" content="{{ JOB_COMMON_META }}">
+  <meta name="twitter:description" content="{{ JOB_COMMON_META }}">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Jobs</li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block job-content %}
+  <a href="{% url job_post %}" class="d-sm-block d-md-none btn btn-success btn-full-width btn-post">Post Job (FREE)</a>
+  <hr class="d-sm-block d-md-none">
+  <h1 class="title t-large">Python Job Listings</h1>
+  <div class="sort t-medium">
+    <span class="text-muted">Sort by:</span>
+    {% if request.GET.sort == 'date' %}
+      <a href="?q={{ query|urlencode }}">relevance</a> - <strong>date</strong>
+    {% else %}
+      <strong>relevance</strong> - <a href="?q={{ query|urlencode }}&sort=date">date</a>
+    {% endif %}
+  </div>
+  <hr>
+  <div class="listings">
+  {% if  jobs %}
+    {% include "job/_listing.html" with jobs=jobs %}
+    <nav>
+      <ul class="pagination justify-content-between">
+        {% if paginator.has_previous %}
+          <li class="page-item previous"><a class="page-link" href="?q={{ query|urlencode }}&page={{ paginator.previous_page_number }}&sort={{ request.GET.sort }}">«&nbsp;Prev</a></li>
+        {% else %}
+          <li class="page-item previous disabled"><a class="page-link" href="javascript:;" rel="nofollow">«&nbsp;Prev</a></li>
+        {% endif %}
+        {% if paginator.has_next %}
+          <li class="page-item next"><a class="page-link" href="?q={{ query|urlencode }}&page={{ paginator.next_page_number }}&sort={{ request.GET.sort }}">Next&nbsp;»</a></li>
+        {% else %}
+          <li class="page-item next disabled"><a class="page-link" href="javascript:;" rel="nofollow">Next&nbsp;»</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% else %}
+      <h2>Sorry, no python jobs found.</h2>
+  {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'event/base.html' %}
+
+{% block meta_tag %}
+  <title>Python Events | PyCareer</title>
+  <meta name="description" content="{{ EVENT_COMMON_META }}">
+{% endblock %}
+
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Python Events">
+  <meta property="og:url" content="{{ SITE_URL }}{% url event_list %}">
+  <meta name="twitter:url" content="{{ SITE_URL }}{% url event_list %}">
+  <meta name="twitter:title" content="Python Events">
+  <meta property="og:description" content="{{ EVENT_COMMON_META }}">
+  <meta name="twitter:description" content="{{ EVENT_COMMON_META }}">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url event_list %}">Events</a></li>
+    <li class="breadcrumb-item " aria-current="page">Past Python Events</li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block event-content %}
+  <h1 class="title t-large"><i class="fa fa-calendar"></i>&nbsp;{{ title }}</h1>
+  <hr>
+  <div class="events">
+    {% include "event/_event-list.html" with events=events%}
+  </div>
+{% endblock %}

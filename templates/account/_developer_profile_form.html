@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="well">
+      {{ form.non_field_errors }}
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="first_name">First Name <span class="required">*</span></label>
+            <input type="text" class="form-control" name="first_name" value="{{ profile.user.first_name }}" maxlength="30">
+            {{ form.first_name.errors }}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="last_name">Last Name <span class="required">*</span></label>
+            <input type="text" class="form-control" name="last_name" value="{{ profile.user.last_name }}" maxlength="30">
+            {{ form.last_name.errors }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" value="{{ profile.user.email }}" disabled>
+            <p class="help-block">provided to employers you apply to</p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="phone_number">Phone Number <i class="fa fa-lock"></i></label>
+            <input type="text" class="form-control" name="phone_number" value="{{ profile.phone_number|default:"" }}" maxlength="30">
+            {{ form.phone_number.errors }}
+            <p class="help-block">provided to employers you apply to</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="city">City <span class="required">*</span></label>
+            <input type="text" class="form-control" name="city" value="{{ profile.city|default:"" }}" placeholder="Brooklyn" maxlength="50">
+            {{ form.city.errors }}
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="city">State</label>
+            <input type="text" class="form-control" name="state" value="{{ profile.state|default:"" }}" placeholder="NY" maxlength="15">
+            {{ form.state.errors }}
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="country">Country <span class="required">*</span></label>
+            <select class="form-control" name="country">
+              <option value="" disabled selected>Select a country</option>
+              {% for code, name in  countries %}
+                {% if code == profile.country %}
+                  <option selected="selected" value="{{ code }}">{{ name }}</option>
+                {% else %}
+                  <option value="{{ code }}">{{ name }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+            {{ form.country.errors }}
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <label for="title">Title <span class="required">*</span></label>
+        <input type="text" class="form-control" name="title" value="{{ profile.title|default:"" }}" maxlength="100" placeholder="Senior Full Stack Engineer">
+        {{ form.title.errors }}
+      </div>
+      <div class="form-group">
+        <label for="title">Skills <span class="required">*</span></label>
+        <input class="form-control tagsinput-typeahead" type="text" name="skills" value="{{ profile.skills|default:"" }}" placeholder="Add a skill">
+        <p class="help-block">Add up to 10 skills. Suggest more skills <a href="{% url contact_page %}">here</a>.</p>
+        {{ form.skills.errors }}
+      </div>
+      <div class="form-group">
+        <label for="summary">Summary <span class="required">*</span></label>
+        <textarea name="summary" rows="6" class="form-control" id="summary">{{ profile.summary|default:"" }}</textarea>
+        {{ form.summary.errors }}
+      </div>
+      <div class="form-group">
+        <label>Profile Links:</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-linkedin-square"></i></span>
+          </div>
+          <input type="text" name="linkedin_url" value="{{ profile.linkedin_url|default:"" }}" class="form-control" placeholder="LinkedIn">
+          {{ form.linkedin_url.errors }}
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-github-square"></i></span>
+          </div>
+          <input type="text" name="github_url" value="{{ profile.github_url|default:"" }}" class="form-control" placeholder="Github">
+          {{ form.github_url.errors }}
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-stack-overflow"></i></span>
+          </div>
+          <input type="text" name="stackoverflow_url" value="{{ profile.stackoverflow_url|default:"" }}" class="form-control" placeholder="StackOverflow">
+          {{ form.stackoverflow_url.errors }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="text-semibold">Avatar:</label>
+        <div class="media">
+          <a href="javascript:;">
+            {% if profile.avatar_url %}
+              <img class="avatar-holder" src="{{ profile.avatar_url }}" alt="">
+            {% else %}
+              <img class="avatar-holder" src="/static/img/placeholder.jpg" alt="">
+            {% endif %}
+          </a>
+          <div class="media-body">
+            <input type="text" class="form-control" name="avatar_url" value="{{ profile.avatar_url|default:"" }}" maxlength="250" placeholder="Avatar URL">
+            <p class="help-block">Avatar URL must be public to access.</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Profile</button>
+    </div>
+  </div>
+</div>

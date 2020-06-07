@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block meta_tag %}
+<title>Python Events | PyCareer</title>
+<meta name="description" content="{{ EVENT_COMMON_META }}">
+{% endblock %}
+
+{% block social_tag %}
+<!-- document-specific social tags -->
+<meta property="og:title" content="Python Events">
+<meta property="og:url" content="{{ SITE_URL }}{% url event_list %}">
+<meta name="twitter:url" content="{{ SITE_URL }}{% url event_list %}">
+<meta name="twitter:title" content="Python Events">
+<meta property="og:description" content="{{ EVENT_COMMON_META }}">
+<meta name="twitter:description" content="{{ EVENT_COMMON_META }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb t-small">
+      <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Events</li>
+    </ol>
+  </nav>
+  <h1 class="title t-large">Python Events In Map</h1>
+  <hr>
+  <div id="mapid" class="mt-4"></div>
+  <div class="t-small" style="text-align: center">
+    Inspired by <a href="http://lmorillas.github.io/python_events/">Python Events</a> |
+    Data extracted from the <a href="https://wiki.python.org/moin/PythonEventsCalendar">Python Calendars</a>
+  </div>
+  <hr>
+  <div class="row event-list mt-4">
+    <div class="col-md-4">
+      <h1 class="title t-large"><i class="fa fa-calendar"></i>&nbsp;PyCon Events</h1>
+      <hr>
+      <div class="events">
+        {% include "event/_event-list.html" with events=pycon_events%}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <hr class="d-sm-block d-md-none">
+      <h1 class="title t-large"><i class="fa fa-calendar"></i>&nbsp;User Events</h1>
+      <hr>
+      <div class="events">
+        {% include "event/_event-list.html" with events=user_events%}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <hr class="d-sm-block d-md-none">
+      <h1 class="title t-large"><i class="fa fa-calendar"></i>&nbsp;Past Events</h1>
+      <hr>
+      <div class="events">
+        {% include "event/_event-list.html" with events=past_events%}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extracss %}
+<style>
+  #mapid {
+    width: 100%;
+    height: calc(100vh - 256px);
+  }
+</style>
+{% endblock %}
+
+
+{% block extrajs %}
+<script>
+  function addInfoWindow(map, marker, event) {
+    var link = event.website || event.calender_link;
+    var message =
+    '<div class="info_content">' +
+      '<h4><a href="'+ event.url +'">' + event.name +'</a></h4>' +
+      '<strong>Start : </strong>' + event.start_date + '<br>' +
+      '<strong>End : </strong>' + event.end_date + '<br>' +
+      '<strong>Location : </strong>' + event.location +
+    '</div>';
+
+    var infoWindow = new google.maps.InfoWindow({
+      content: message
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+      infoWindow.open(map, marker);
+    });
+  }
+
+  function initMap() {
+    var center = {lat: 22.1239, lng: 7.05245};
+    var map = new google.maps.Map(document.getElementById('mapid'), {
+      zoom: 2,
+      center: center,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+      scaleControl: true,
+      streetViewControl: true,
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      }
+    });
+
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $.getJSON('/events/api/', function(events) {
+      if (events.length == 0) {
+        return;
+      }
+      var markers = events.map(function(event, i) {
+        var marker = new google.maps.Marker({
+          position: {lat: event.lat, lng: event.lon},
+          map: map
+        });
+        addInfoWindow(map, marker, event);
+      });
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+</script>
+{% endblock %}

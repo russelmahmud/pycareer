@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+.gaedata
+.idea
+database
+venv
+lib/*.dist-info
+.cache

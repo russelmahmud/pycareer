@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Python.org Jobs Feed</title><link>https://python.org/jobs/</link><description>Python jobs from Python.org</description><atom:link href="https://python.org/jobs/feed/rss/" rel="self"></atom:link><language>en-us</language><lastBuildDate>Wed, 02 Sep 2015 08:55:55 -0000</lastBuildDate><item><title>Python Developers - Charlotte, NC - Diversant</title><link>https://python.org/jobs/618/</link><description>Charlotte,North Carolina,United States
+&lt;p&gt;&lt;strong&gt;Python Developers - Charlotte, NC&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our financial services client in Charlotte, NC is seeking talented professionals for contract and contract to hire opportunities working on full cycle Python development initiatives (not just scripting).  This team is responsible for using Python to build enterprise financial applications including supporting tools and processes.&lt;/p&gt;
+&lt;p&gt;This group uses Python due to it's rapid application development, it's ability to act as the &amp;quot;glue&amp;quot; between legacy systems, along with the inherent flexibility in architecture and design.  Gaps in this flexibility are handled with custom internal tools.&lt;/p&gt;
+
+&lt;p&gt;Prior financial services (specifically Capital Markets) would be a big plus but not required.&lt;/p&gt;
+&lt;p&gt;Typical profiles have experience in the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;5+ Years object oriented programming (usually Java or C++) and design&lt;/li&gt;
+&lt;li&gt;2+ Years Python experience&lt;/li&gt;
+&lt;li&gt;Object database experience&lt;/li&gt;
+&lt;li&gt;Agile/Scrum Methodology experience&lt;/li&gt;
+&lt;li&gt;Proactive with creditable problem solving capabilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Multiple positions are available.  Compensation will vary depending on experience (typically $65-70+/hr. W2).  All roles are onsite only.  In-person interview required for offer.  Potential consultants must be willing to work with Diversant directly.  Transfer scenarios will be considered for strong profiles.&lt;/p&gt;
+</description><guid>https://python.org/jobs/618/</guid></item><item><title>Python Developer - Episteme Capital</title><link>https://python.org/jobs/617/</link><description>London,,United Kingdom
+&lt;p&gt;Episteme Capital’s main office, in central London, is looking for a computer science candidate or recent graduate. The role will involve operational software development and daily operational tasks. No prior experience in finance or operations is necessary and full training will be given. You will work closely with traders and researchers. There is an opportunity to grow into other roles over time.&lt;/p&gt;
+&lt;p&gt;The role will initially include the following responsibilities:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Operations tasks, including checking trade, position and cash reconciliations and the daily profit and loss statements provided by third parties, and investigate any issues that may arise. These tasks are partially manual and the responsibilities include to automate them as much as possible and to maintain the in-house operations software.&lt;/li&gt;
+&lt;li&gt;Develop and maintain databases for the efficient storage and retrieval of financial data sets.&lt;/li&gt;
+&lt;li&gt;Source and clean financial datasets for use in proprietary research.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Candidates will ideally have the following skills:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python programming and preferably also C# programming.&lt;/li&gt;
+&lt;li&gt;Knowledge about developing and maintaining stored procedures in SQL, preferably using Microsoft SQL Server.&lt;/li&gt;
+&lt;li&gt;MS Excel/Access.&lt;/li&gt;
+&lt;li&gt;High level of numeracy.&lt;/li&gt;
+&lt;li&gt;Attention to detail.&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/617/</guid></item><item><title>Python Developer - Kitewheel</title><link>https://python.org/jobs/616/</link><description>Boston,MA,USA
+&lt;p&gt;Powering the next generation of marketing, Kitewheel is cloud-based software, used by the world’s largest digital agencies to deliver real-time customer experiences across social networks, web sites, mobile apps and more.&lt;/p&gt;
+&lt;p&gt;Qualified candidate will contribute to the development of back-end services for a large scale SaaS based customer engagement platform.&lt;/p&gt;
+&lt;p&gt;Essential Job Functions&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Develops and integrates communications modules by incorporating 3rd party APIs into an existing analysis infrastructure&lt;/li&gt;
+&lt;li&gt;Integrates applications by designing interfaces to back-end systems such as database architecture and server scripting; studying and establishing connectivity with network systems, search engines, and information servers.&lt;/li&gt;
+&lt;li&gt;Recommends system solutions by comparing advantages and disadvantages of custom development and purchase alternatives&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Essential Job Requirements&lt;/p&gt;
+&lt;p&gt;Education:  Bachelor’s or Masters Degree in Computer Science or Computer Engineering or equivalent experience&lt;/p&gt;
+&lt;p&gt;Technology experience in the following areas is preferred:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;2-3 years of experience in back-end development using Python (2.7 or 3.4) in both threaded and multi-processing contexts. Flask or Django experience is a plus.&lt;/li&gt;
+&lt;li&gt;Knowledge of SQL and NoSQL databases and message queues.&lt;/li&gt;
+&lt;li&gt;Experience with deployment on AWS or Heroku, as well as tools for continuous integration.&lt;/li&gt;
+&lt;li&gt;Familiar with REST-compliant web service protocols and 3rd party APIs (Twitter, Instagram, Google Maps, etc).&lt;/li&gt;
+&lt;li&gt;Background in or knowledge of graph theory a strong plus&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/616/</guid></item><item><title>System Python Developer  - ISGF</title><link>https://python.org/jobs/615/</link><description>Silver Spring,Maryland,United States
+&lt;p&gt;We are looking for a few extraordinary developers to grow our world-class team. Our software team is focused to solve big, and meaningful challenges in chip-card (EMV), and payment processing. We're a small team, and looking for people to make a big impact. This means you should want to take on lots of responsibility and be able to handle projects independently.&lt;/p&gt;
+&lt;p&gt;This is a great job if you are an engineer with 3-15 years of experience who wants to be part of a small, intensely skilled team, feels total ownership of your work, and can't imagine a day without coding. You will play a crucial role in our platform development and everything you do matters.&lt;/p&gt;
+&lt;p&gt;We want smart, extremely motivated team members who are willing and able to contribute quickly on projects, and who are excited and passionate about the challenges we face.&lt;/p&gt;
+
+&lt;p&gt;Our gateway tech stack&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python with asynch-core and similar Reactor pattern implementations&lt;/li&gt;
+&lt;li&gt;Oracle 11/12g OLTP database&lt;/li&gt;
+&lt;li&gt;Linux and Solaris OS; Apache reverse-proxy; Load balancers; PKI responsibilities&lt;/li&gt;
+&lt;li&gt;Design and Develop innovative technology &amp;amp; software as part of a team of highly talented software developers&lt;/li&gt;
+&lt;li&gt;Help plan and implement methods to scale the product well beyond current capabilities in size and functionalities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Qualifications:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bachelor’s degree in Computer Science or related field (Preferred).&lt;/li&gt;
+&lt;li&gt;3-15 years of experience developing incredible code&lt;/li&gt;
+&lt;li&gt;Experience with Object Oriented languages Python, C++, Java (Python Preferred) under Unix/Linux&lt;/li&gt;
+&lt;li&gt;A detail-oriented and highly communicative personality, with the ability to work independently and as part of a team&lt;/li&gt;
+&lt;li&gt;Experience with TCP/IP, socket and asynchronous communication&lt;/li&gt;
+&lt;li&gt;SQL and database programming (Oracle a plus)&lt;/li&gt;
+&lt;li&gt;Experience in payment industry, and encryption technologies is a plus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For immediate consideration please email randi &amp;#64;isgf.com or call 407-307-3993&lt;/p&gt;
+</description><guid>https://python.org/jobs/615/</guid></item><item><title>Scientific Programmer - Predictive Science inc.</title><link>https://python.org/jobs/612/</link><description>San Diego,CA,USA
+&lt;p&gt;Predictive Science Incorporated (PSI), an employee-owned company in San Diego California, is in immediate need of a full-time scientific programmer to help our team conduct research in a range of scientific fields, including modeling infectious diseases and/or solar physics.&lt;/p&gt;
+&lt;p&gt;The successful candidate will help the team develop numerical models, scripts/applications for visualizing model results, and/or frontend/backend webpages.&lt;/p&gt;
+&lt;p&gt;Please note we are only looking at local candidates.&lt;/p&gt;
+
+&lt;p&gt;A Bachelor's or Master’s degree from an accredited University in Computer Science, Data Science, Physics, or Engineering, and strong computer skills. Must have substantial experience using at least some of the following languages: C, C++, Fortran, R, Java, Python, or Matlab.&lt;/p&gt;
+</description><guid>https://python.org/jobs/612/</guid></item><item><title>Full-stack developer with a strong testing background - Beauhurst</title><link>https://python.org/jobs/611/</link><description>London,,United Kingdom
+&lt;p&gt;&lt;em&gt;Beauhurst is looking for a full-stack developer with a strong testing background to join our fast-growing team in London. We're a full-stack Python company composed of front/back end developers and data scientists and are looking for someone to help unify our various deployment and testing setups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;### You will be responsible for ...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;helping us shape our testing strategy across multiple projects&lt;/li&gt;
+&lt;li&gt;working on new features on our Django website&lt;/li&gt;
+&lt;li&gt;designing automation processes to facilitate the developments of applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### You should know ...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python and preferably have experience with Django or Python based web framework&lt;/li&gt;
+&lt;li&gt;pytest, unittest or a Python testing framework&lt;/li&gt;
+&lt;li&gt;Jasmine or a Javascript test framework&lt;/li&gt;
+&lt;li&gt;Selenium&lt;/li&gt;
+&lt;li&gt;all the usual frontend stack (HTML5, CSS3, Javascript ...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### We also like ...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Linux (you should be very comfortable on the command line)&lt;/li&gt;
+&lt;li&gt;mercurial&lt;/li&gt;
+&lt;li&gt;Postgres&lt;/li&gt;
+&lt;li&gt;Backbone.js, underscore.js&lt;/li&gt;
+&lt;li&gt;Nix package manager (bonus points for this)&lt;/li&gt;
+&lt;li&gt;people who are self motivated and strive to drive quality into (y)our code&lt;/li&gt;
+&lt;li&gt;attention to detail&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### What we can offer ...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;chance to play a crucial role in the designing of our future testing environment&lt;/li&gt;
+&lt;li&gt;opportunity to help shape the technological fate of an exciting, fast-growing company&lt;/li&gt;
+&lt;li&gt;attend relevant conferences (eg. PyCon UK, DjangoCon, PyData)&lt;/li&gt;
+&lt;li&gt;relaxed start-up atmosphere with flat structure&lt;/li&gt;
+&lt;li&gt;regular evenings out, we're a very sociable bunch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### How to apply&lt;/p&gt;
+&lt;p&gt;Please send us your CV via the link below and be sure to include a short cover letter.&lt;/p&gt;
+&lt;p&gt;Please use these to demonstrate to us both your experience and your suitability for the role. Links to websites you've worked on, examples of projects you've contributed to, details of your GitHub/Bitbucket profile would all be positive additional to your application. Note that applicants that submit generic covering letters will be automatically rejected.&lt;/p&gt;
+&lt;p&gt;Start date is ASAP. You must currently be eligible to live and work in the UK to apply for this position.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note for agencies&lt;/em&gt;: We'll only be accepting applications directly from candidates at this time.&lt;/p&gt;
+
+</description><guid>https://python.org/jobs/611/</guid></item><item><title>Python Automation Engineer  - MindSource</title><link>https://python.org/jobs/610/</link><description>Sunnyvale,CA,USA
+&lt;p&gt;MindSource is looking for a PYTHON AUTOMATION ENGINEER for our clients in Sunnyvale, CA, Santa Clara, CA, and San Francisco, CA.  These top-notch automation engineers will help our clients with building out automated testing suites for a multitude of native, mobile, and web-based applications used throughout the world.   This is a 6+ month contract opportunity.&lt;/p&gt;
+&lt;p&gt;Education:  BS EE/CE/CS or equivalent; minimum 3 years QA experience&lt;/p&gt;
+
+&lt;p&gt;Qualifications&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Web automation using Selenium / Java utilizing page object architecture&lt;/li&gt;
+&lt;li&gt;Strong Python scripting experience (previous server automation)&lt;/li&gt;
+&lt;li&gt;Experience with Objective-C / Swift (iOS) is a plus&lt;/li&gt;
+&lt;li&gt;Comfortable with LINUX / UNIX and shell scripting&lt;/li&gt;
+&lt;li&gt;iOS testing or development experience a plus&lt;/li&gt;
+&lt;li&gt;Strong automation architecture development a plus&lt;/li&gt;
+&lt;li&gt;Languages (two of the three):  JavaScript / Python / Java&lt;/li&gt;
+&lt;li&gt;Develop rock solid automation infrastructure and test cases&lt;/li&gt;
+&lt;li&gt;Find and file bugs in Enterprise Security and Core Splunk product&lt;/li&gt;
+&lt;li&gt;Eagerness to learn new technologies&lt;/li&gt;
+&lt;li&gt;Expert at coding in Python (or development experience in another language that proves you could become an expert quickly)&lt;/li&gt;
+&lt;li&gt;Capable of technical writing (bug reports, test plans, test specifications)&lt;/li&gt;
+&lt;li&gt;Experience with GUI or Web applications testing (Selenium, Rational Functional Tester, etc.)&lt;/li&gt;
+&lt;li&gt;Professional experience in software/web startup companies as well as in big-company product development or IT environments&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/610/</guid></item><item><title>Python Instructor - Johnmasoninstitute</title><link>https://python.org/jobs/608/</link><description>Nashua,New Hampshire,United States
+&lt;p&gt;Conduct  customized practical training using our  training materials.&lt;/p&gt;
+
+&lt;ul class="simple"&gt;
+&lt;li&gt;Practical experience with Python Programming&lt;/li&gt;
+&lt;li&gt;Practical experience with Python&lt;/li&gt;
+&lt;li&gt;Strong experience in Computer programming&lt;/li&gt;
+&lt;li&gt;Minimum 10 years of business experience in Programming&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/608/</guid></item><item><title>Senior Python Developer - Luna Data Solutions</title><link>https://python.org/jobs/606/</link><description>Austin,Texas,United States
+&lt;p&gt;Responsibilities:
+Building Web 2.0 applications using dynamic languages
+Designing new features and functionality
+Learning new technologies quickly
+Interfacing with open source community&lt;/p&gt;
+
+&lt;p&gt;Requirements:
+7+ years programming experience with excellent understanding of OO concepts
+3+ years of web application development
+1+ year of experience with Python
+Experience designing and implementing large scale systems&lt;/p&gt;
+&lt;p&gt;Preferences:
+Experience with open source development techniques
+Experience working in an agile environment
+Experience with major Python web application frameworks
+Experience with SNMP and other network management protocols&lt;/p&gt;
+</description><guid>https://python.org/jobs/606/</guid></item><item><title>Python Developer (multiple levels) - Flashpoint</title><link>https://python.org/jobs/603/</link><description>New York,NY,USA
+&lt;p&gt;You’ve probably heard of the Deep &amp;amp; Dark Web—the part of the Internet that’s inaccessible to mainstream search engines. While people certainly use it for many legitimate reasons, the Deep &amp;amp; Dark Web also affords a level of anonymity that makes it the perfect place on the Internet for bad guys to get together and cause problems for everyone.&lt;/p&gt;
+&lt;p&gt;At Flashpoint, we illuminate the Deep &amp;amp; Dark Web by building powerful tools that help protect the people you know and love (and even those you don't) from the looming threats emanating from the underbelly of the Internet.&lt;/p&gt;
+&lt;p&gt;Our commercial clients across the Fortune 500 use our products to gain visibility into these rather opaque areas of the Internet to help defend themselves and their customers (you're probably one of them) from people exploiting the Deep &amp;amp; Dark Web for unsavory goals. Our government clients use our products to help protect you and your fellow citizens from having to worry about people up to no good.&lt;/p&gt;
+&lt;p&gt;We're undertaking unprecedented work here at Flashpoint. Our challenges are at the forefront of cyber intelligence, and the problems we’re solving demand a certain kind of mentality employing both traditional and nontraditional methodologies. We’re a group of tinkerers, white-hat hackers, and puzzle-driven engineers. Our office encourages outside-the-box thinking, experimentation, and open collaboration. Overhear a problem that you want to help solve? Speak up, and you’ll be involved. Discover a new technology that will make all our lives easier? Present it to the team, and lead its implementation.&lt;/p&gt;
+&lt;p&gt;Challenges and long hours aside, we take time to decompress, remove ourselves from work, and mellow out as a team. Stopping to smell the roses is pretty much a prerequisite around here; it keeps us happy as individuals and promotes a healthy and empowering tight-knit culture for our team.&lt;/p&gt;
+&lt;p&gt;You’ve heard a little bit about us; now we’ve got some questions for you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Do you want to have a direct impact in making the world a safer place?&lt;/li&gt;
+&lt;li&gt;Do you want to help solve complicated, real-world problems that require your sleeves to be rolled up well past your elbows?&lt;/li&gt;
+&lt;li&gt;Do you like to tackle difficult challenges alongside a team of talented and intrepid colleagues?&lt;/li&gt;
+&lt;li&gt;Do you like to have fun in a supportive, team-driven environment?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you answered &amp;quot;no&amp;quot; to any of these questions, we won’t hold it against you, but we're probably not a fit.&lt;/p&gt;
+&lt;p&gt;If you made it past that peer-into-your-soul interrogation with all “Yeses”, then congratulations! You nurture an altruistic streak, you don't shy away from an uphill battle, and you like to have fun alongside like-minded people. Us too!&lt;/p&gt;
+&lt;p&gt;We’re going to need people like you to help develop our cutting edge data delivery and analysis platform. There’s a tremendous amount of work for us on the road ahead, and we’re moving at ludicrous speed, so we’re looking for a comrade-in-arms to jump in and join our team trailblazing the Deep &amp;amp; Dark Web.&lt;/p&gt;
+&lt;p&gt;If this sounds appealing, then we'd be very excited to hear from you.&lt;/p&gt;
+&lt;p&gt;Below is more about the role we have in mind.&lt;/p&gt;
+&lt;p&gt;Roles and Responsibilities
+* Build and maintain the our platform
+* Write unit tests (as we code, not 3 months after release)
+* Document system as as you build it (we believe communication is key in software development)
+* Participate in scrum process
+* Help bring in new technologies and develop innovative approaches to the data challenges we face&lt;/p&gt;
+&lt;p&gt;No recruiters or third parties, please!
+Sorry, we won't be sponsoring visas for this role!&lt;/p&gt;
+
+&lt;p&gt;Required Qualifications and Experience
+* Python
+* Django
+* Experience with RESTful APIs
+* Experience writing unit tests
+* Strong communication skills
+* Ability to work in a startup environment&lt;/p&gt;
+&lt;p&gt;Nice to Haves
+* Experience developing security tools or any type of security oriented background
+* Experience with big data projects
+* Agile experience
+* Love for Smash Bros.&lt;/p&gt;
+</description><guid>https://python.org/jobs/603/</guid></item><item><title>Java and Python Developer for Cloud - SELLBYTEL Group</title><link>https://python.org/jobs/601/</link><description>Barcelona,Barcelona,Spain
+&lt;p&gt;Do you live in a digital world?
+Can you say that Software development is your hobby?
+Would you like to work in Barcelona for a popular American company leader in cloud technology?&lt;/p&gt;
+&lt;p&gt;If yes, SELLBYTEL is your answer!&lt;/p&gt;
+&lt;p&gt;SELLBYTEL is a young and dynamic international company providing service to the top 10 companies belonging to the IT and social networking world. We are based in the heart of Barcelona with more than 2000 employees from all over the world. On top of that, we offer an attractive environment with a great team spirit. We are looking for new talent and new potential to join our growing, multicultural company.&lt;/p&gt;
+&lt;p&gt;We are looking for a software engineer to provide technical support in Cloud platform for one of our clients.&lt;/p&gt;
+&lt;p&gt;Your main tasks will be:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Resolving clients' cloud technical problems.&lt;/li&gt;
+&lt;li&gt;Helping companies to create their own applications and programs.&lt;/li&gt;
+&lt;li&gt;Advising clients the best solutions to reach their objectives.&lt;/li&gt;
+&lt;li&gt;Development and improvement of cloud platforms.&lt;/li&gt;
+&lt;li&gt;Daily meeting with the client.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What SELLBYTEL offers you?&lt;/p&gt;
+&lt;p&gt;-Competitive salary.
+-Permanent contract.
+-Ticket restaurant.
+-Private health insurance.
+-Specific training given by the client.
+-Opportunity to travel.
+-Internal Development Program.
+-Possibility to grow within our company.
+-Free Spanish/Catalan certified lessons.
+-Assistance with your relocation to Barcelona (Help with your initial living cost).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*The recruitment processes and people involved in them (both recruiters and Project Managers) will not discriminate any candidacy because of age, disability, ethnic, marital status, gender, nationality, ideology, politic, race, religion and sexual orientation.*&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Minimum requirements:&lt;/p&gt;
+&lt;p&gt;-High knowledge of Java, Python.
+-Ability to read and understand code, able to write code to reproduce customer problems.
+-Good troubleshooting skills, ability to use packet and protocol captures.
+-Familiar with web protocols (HTTP, TLS, SSL etc).
+-Experience in Web development, HTML.. Knowledge of web application security models is a good plus.
+-Ability to read and understand public facing docs (Google developer's website or stack overflow).
+-Ability to read and understand logs and stack traces.
+-Familiarity with modern API technologies (OAuth, HTTP RPCs).
+-HTTP debugging.&lt;/p&gt;
+&lt;p&gt;Preferred qualifications:&lt;/p&gt;
+&lt;p&gt;-Experience in technical support: familiarity with, case prioritization, SLA compliance and quality.&lt;/p&gt;
+&lt;p&gt;Personal skills:&lt;/p&gt;
+&lt;p&gt;-Native/High level of English.
+-Team player.
+-Organization.
+-Positive attitude.
+-Good communication.&lt;/p&gt;
+</description><guid>https://python.org/jobs/601/</guid></item><item><title>Back End Developer - Python - Opsview</title><link>https://python.org/jobs/600/</link><description>Reading,Berkshire,United Kingdom
+&lt;p&gt;We are looking for a talented developer with Python experience to join our growing Back End team. You will be joining at an exciting time as we are about to embark on an exciting and challenging period where you will have a massive influence on shaping future versions of the Opsview products.&lt;/p&gt;
+
+&lt;p&gt;If you have strong Python experience, along with good Linux knowledge, experience of WSGI web frameworks, working with SQL and enjoy working in a fast paced Agile environment then we would like to talk to you!&lt;/p&gt;
+</description><guid>https://python.org/jobs/600/</guid></item><item><title>Medior Developer - Directlyrics</title><link>https://python.org/jobs/599/</link><description>Amsterdam,,The Netherlands
+&lt;p&gt;For the website &lt;a class="reference external" href="http://www.directlyrics.com"&gt;Directlyrics&lt;/a&gt;
+– visited daily by over 700k music fans – we are looking for a medior developer experienced with Python in combination Django to work with our small tech team on our backend system which crawls, extracts and performs semantic analysis of online content.&lt;/p&gt;
+
+&lt;ul class="simple"&gt;
+&lt;li&gt;Initial 21 hours per week, part-time, long-term, on-location (Amsterdam, The Netherlands).&lt;/li&gt;
+&lt;li&gt;Python experience and in-production examples showing of your skills.&lt;/li&gt;
+&lt;li&gt;Experience with creating relational databases as well as no-SQL (Redis).&lt;/li&gt;
+&lt;li&gt;Independent worker, that loves to put his mind to work while also learn new things.&lt;/li&gt;
+&lt;li&gt;SCRUM experience is preferred.&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/599/</guid></item><item><title>Technical Lead Developer - FazWaz</title><link>https://python.org/jobs/598/</link><description>Bangkok,,Thailand
+&lt;ul class="simple"&gt;
+&lt;li&gt;Inspire the technology organization's team members to bring out the best in each other and in our products&lt;/li&gt;
+&lt;li&gt;Organize teams and engineering processes to deliver the best product while also planning for high growth&lt;/li&gt;
+&lt;li&gt;Encourage and ensure the technology organization is communicating effectively with all areas of the business&lt;/li&gt;
+&lt;li&gt;Evangelize and support best practices for development&lt;/li&gt;
+&lt;li&gt;Relentlessly drive and support collaboration on projects, programs, and initiatives&lt;/li&gt;
+&lt;li&gt;Participate in the broader technical community to stay current with trends and possibilities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="simple"&gt;
+&lt;li&gt;5+ years of hands-on engineering and leadership experience of small teams&lt;/li&gt;
+&lt;li&gt;Experience and passion for start up environments&lt;/li&gt;
+&lt;li&gt;Agile, Scrum or Kanban methodology&lt;/li&gt;
+&lt;li&gt;Ability to collaborate with our Product and Program Management teams&lt;/li&gt;
+&lt;li&gt;Exceptional communication skills to include speaking and presenting to small groups&lt;/li&gt;
+&lt;li&gt;Appreciation for open source and big data technologies. Our tech stack: Python, SQLAlchemy PostgreSQL, ElasticSearch, PostgreSQL&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/598/</guid></item><item><title>Contract to Hire Python Developer Position--Mount Laurel, NJ - DIVERSANT</title><link>https://python.org/jobs/597/</link><description>Mount Laurel,New Jersey,USA
+&lt;p&gt;Codes software applications to adhere to designs supporting internal business requirements or external customers. Standardizes the quality assurance procedure for software. Oversees testing and develops fixes. May require a bachelor's degree in a related area and at least 5years of experience in the field or in a related area. Has knowledge of standard concepts, practices, and procedures within a particular field. Relies on limited experience and judgment to plan and accomplish goals. Performs a variety of tasks. Works under general supervision. A certain degree of creativity and latitude required. Typically reports to a project leader or manager.
+Software development staff aug required to build necessary change management components&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Scripting languages - Python, Go, NodeJS, PHP and/or PERL&lt;/li&gt;
+&lt;li&gt;Relational Database Management Systems (RDBMS) – MySQL or Oracle&lt;/li&gt;
+&lt;li&gt;Web Services – RESTful, SOAP, etc.&lt;/li&gt;
+&lt;li&gt;Linux – Redhat and/or similar environments&lt;/li&gt;
+&lt;li&gt;Version control systems, GIT, SVN or similar&lt;/li&gt;
+&lt;li&gt;Proven analytical, problem solving and organizational ability&lt;/li&gt;
+&lt;li&gt;Experience in NoSQL storage solutions a plus – ElasticSearch, CouchBase, Cassandra, Redis&lt;/li&gt;
+&lt;li&gt;Experience with additional technologies such as RabbitMQ, Apache Solr&lt;/li&gt;
+&lt;li&gt;A self-starter, demonstrating personal initiative and willingly assumes responsibility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description><guid>https://python.org/jobs/597/</guid></item><item><title>Python developer - Telecom</title><link>https://python.org/jobs/596/</link><description>Madison,WI,USA
+&lt;p&gt;Software development will primarily be completed in Python, but may also include Java, .NET, C, Perl, or PHP. The position is on a small team that is currently looking to ramp up and implement mission critical software that will set an architectural standard for all of the IT department.
+Responsibilities:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Develops, tests, and fixes defects in application software from overall application designs prepared by senior staff under the general direction of a Senior Software Engineer or higher.&lt;/li&gt;
+&lt;li&gt;Designs application software at the module level under the general direction of a Senior Software Engineer or higher.&lt;/li&gt;
+&lt;li&gt;Creates work estimates (effort and duration) of work assignments for inclusion into project plans under the general direction of a Senior Software Engineer or higher.&lt;/li&gt;
+&lt;li&gt;Resolves routine technical problems with systems under the general direction of a Senior Software Engineer or higher.&lt;/li&gt;
+&lt;li&gt;Maintains working knowledge on the systems and tools within the scope of the team's responsibility. Maintains working-level knowledge of software development best practices, tools, and methodologies.&lt;/li&gt;
+&lt;li&gt;Actively participates in quality and continuous improvement initiatives within the scope of the team's responsibility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other Qualifications:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Knowledge of software development methodologies, practices, and tools.&lt;/li&gt;
+&lt;li&gt;Knowledge of project management methodologies, practices, and tools.&lt;/li&gt;
+&lt;li&gt;Knowledge of one more programming languages used by the team.&lt;/li&gt;
+&lt;li&gt;Knowledge of software testing practices and tools.&lt;/li&gt;
+&lt;li&gt;Knowledge of problem solving techniques and tools.&lt;/li&gt;
+&lt;li&gt;Ability to travel as needed for company business and professional development.&lt;/li&gt;
+&lt;li&gt;Ability to work nights and weekends as needed for system implementations and resolving system problems.&lt;/li&gt;
+&lt;li&gt;Knowledge of business analysis practices and business process modeling.&lt;/li&gt;
+&lt;li&gt;Knowledge of Service Oriented Architecture.&lt;/li&gt;
+&lt;li&gt;Knowledge of Enterprise Service Bus.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Qualifications:&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Senior Software Engineer&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;Associate's degree (or higher) –OR- 2+ years professional work experience.&lt;/li&gt;
+&lt;li&gt;3+ years experience in software development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Lead Software Engineer&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;Bachelor’s degree (or higher) –OR- 4+ years professional work experience.&lt;/li&gt;
+&lt;li&gt;5+ years experience in software development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Principal Software Engineer&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;Bachelor’s degree (or higher) –OR- 5+ years professional work experience.&lt;/li&gt;
+&lt;li&gt;6+ years experience in software development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+</description><guid>https://python.org/jobs/596/</guid></item><item><title>Python Test Engineer - APCON</title><link>https://python.org/jobs/595/</link><description>Richardson,Texas,USA
+&lt;ul class="simple"&gt;
+&lt;li&gt;Write novel and creative test cases using best industry practices.&lt;/li&gt;
+&lt;li&gt;Efficiently develop test automation scripts.&lt;/li&gt;
+&lt;li&gt;Manually execute non-automated test cases.&lt;/li&gt;
+&lt;li&gt;Support in developing and maintaining test designs and test cases driven by product requirements.&lt;/li&gt;
+&lt;li&gt;Writing test cases; automating test cases within existing framework.&lt;/li&gt;
+&lt;li&gt;Execute verification and validation tests.&lt;/li&gt;
+&lt;li&gt;Support in logging, tracking, communication, and resolution of defects.&lt;/li&gt;
+&lt;li&gt;Assist development on bug fixes, bug isolation, and resolution.&lt;/li&gt;
+&lt;li&gt;Deliver timely verification of fixes in response to generation of bugs.&lt;/li&gt;
+&lt;li&gt;Advocate, develop and deploy new testing/automation tools and concepts.&lt;/li&gt;
+&lt;li&gt;Be a relentless advocate for Quality at APCON.&lt;/li&gt;
+&lt;li&gt;Ramp up quickly on requirements, test environment and tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="#id1"&gt;&lt;span class="problematic" id="id2"&gt;**&lt;/span&gt;&lt;/a&gt;All employees working for APCON must be eligible to work in the USA (No Visa Sponsorship)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;BSCS/EE/CE degree and/or the equivalent in training and experience.&lt;/li&gt;
+&lt;li&gt;Minimum 1 year in a software test engineering role.&lt;/li&gt;
+&lt;li&gt;Knowledge of IP networking, routing and switching.&lt;/li&gt;
+&lt;li&gt;Hands on experience with software development testing&lt;/li&gt;
+&lt;li&gt;Experience with Python&lt;/li&gt;
+&lt;li&gt;Experience in formal software testing methodologies, including software development cycles, testing processes and standards.&lt;/li&gt;
+&lt;li&gt;Hands on experience writing test development scripts&lt;/li&gt;
+&lt;li&gt;Experience designing automated testing frameworks.&lt;/li&gt;
+&lt;li&gt;Testing experience with embedded Linux systems.&lt;/li&gt;
+&lt;li&gt;Testing experience of enterprise software systems and network management applications.&lt;/li&gt;
+&lt;li&gt;Familiar with defect and test case tracking using tools (Redmine, Clearquest, Mantis, TestLink, HP QC).&lt;/li&gt;
+&lt;li&gt;Able to work well as part of a team or independently as needed.&lt;/li&gt;
+&lt;li&gt;Possess a willingness and eagerness to adapt to new processes, ideas, and concepts.&lt;/li&gt;
+&lt;li&gt;Practice excellent interpersonal and communication skills.&lt;/li&gt;
+&lt;li&gt;Utilize good judgment and strong analytical skills.&lt;/li&gt;
+&lt;li&gt;Some knowledge of GUI is preferred but not required&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/595/</guid></item><item><title>Python Software Engineer - Verodin</title><link>https://python.org/jobs/594/</link><description>McLean,VA,USA
+&lt;p&gt;Growing cyber security startup is rapidly expanding and looking for an experienced Python engineer to join its team. Position is full-time. Looking for a motivated candidate that wants to work in an exciting (and hectic) startup atmosphere. If you find yourself saying “That is not in my job description”, than this job is not for you. If you like to roll up your sleeves and get your hands dirty, we want to hear from you!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Required&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Minimum Bachelor’s Computer Science or other technical field  (or equivalent work experience)&lt;/li&gt;
+&lt;li&gt;2+ years working Python in Linux/Unix environment&lt;/li&gt;
+&lt;li&gt;Solid knowledge of network communication (e.g. TCP/IP, UDP, ICMP) and application protocols (e.g. HTTP, DNS)&lt;/li&gt;
+&lt;li&gt;Ability to work in a distributed team and great communication skills&lt;/li&gt;
+&lt;li&gt;Familiarity with continuous integration, testing tools, workflows (Jenkins) and source code management tools (git)&lt;/li&gt;
+&lt;li&gt;U.S. citizen or permanent resident&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Preferred&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Experience with client side technologies (JavaScript, HTML5, CSS) and frameworks&lt;/li&gt;
+&lt;li&gt;Experience working with PCAP processing and SOC environments&lt;/li&gt;
+&lt;li&gt;Expert understanding of RESTful APIs and security&lt;/li&gt;
+&lt;li&gt;Experience with cloud based network architectures.&lt;/li&gt;
+&lt;li&gt;Penetration testing and/or blue team experience is a big plus but not required&lt;/li&gt;
+&lt;li&gt;Based in the Washington, DC metro area&lt;/li&gt;
+&lt;/ul&gt;
+</description><guid>https://python.org/jobs/594/</guid></item><item><title>Python/Django Engineer - Interhack Corp. and Secure Discovery LLC.</title><link>https://python.org/jobs/588/</link><description>Columbus,OH,US
+&lt;p&gt;A computer expert and electronic discovery firm is looking for an experienced Python and Django engineer to focus on an application that is currently being used to process evidence in legal proceeding across the United States. This candidate will work collaboratively to lead development of a web front-end for this existing data center application. Successful candidates are passionate about the art of problem solving through programming and will understand how to balance the trade-offs of code that is simple, clever, secure, and of high quality.&lt;/p&gt;
+&lt;p&gt;The job is a contract position for a period of three to six months. Opportunities for full-time employment exist at the end of the contract period. Our offices are located in Columbus, OH but telecommuting may be possible for the right candidate.&lt;/p&gt;
+
+&lt;ul class="simple"&gt;
+&lt;li&gt;Three to five years of software development experience&lt;/li&gt;
+&lt;li&gt;Experience with a Python web framework such as Django, Flask, or Web2py&lt;/li&gt;
+&lt;li&gt;Experience with XHTML, CSS, and JavaScript required to implement a web application from design documentation and use cases&lt;/li&gt;
+&lt;li&gt;Experience with using web service APIs such as REST or SOAP&lt;/li&gt;
+&lt;li&gt;Experience with unit and functional testing frameworks&lt;/li&gt;
+&lt;li&gt;Familiarity with source control such as GIT&lt;/li&gt;
+&lt;li&gt;Comfortable programming in a Linux environment&lt;/li&gt;
+&lt;li&gt;Bachelor’s degree in Computer Science, Engineering, or a related field is desired&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Candidates are encouraged to provide a portfolio or links to GitHub, SourceForge, etc during application process.&lt;/p&gt;
+</description><guid>https://python.org/jobs/588/</guid></item><item><title>Full Stack Python Developer - World News</title><link>https://python.org/jobs/587/</link><description>London,Islington,United Kingdom
+&lt;p&gt;WN Network (&lt;a class="reference external" href="http://wn.com"&gt;http://wn.com&lt;/a&gt;) is looking for a senior full stack developer to work in our North London office, they should have good knowledge of open source technology and AJAX, they will be developing the front end and back end structure for websites including:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://wn.com"&gt;http://wn.com&lt;/a&gt;
+&lt;a class="reference external" href="http://dubai.com"&gt;http://dubai.com&lt;/a&gt;
+&lt;a class="reference external" href="http://prague.com"&gt;http://prague.com&lt;/a&gt;
+&lt;a class="reference external" href="http://solarpower.com"&gt;http://solarpower.com&lt;/a&gt;
+...&lt;/p&gt;
+&lt;p&gt;A successful candidate will posses a portfolio of web development examples demonstrating different levels of complexities. Must be organized, analytical, detail oriented, and able to communicate effectively.&lt;/p&gt;
+&lt;p&gt;WN Network offers a competitive salary including excellent opportunities for strong advancement and creative development.&lt;/p&gt;
+&lt;p&gt;You will be working with a close knit team of web designers and project managers building online businesses for the UK and internationally. The ideal candidate will be a passionate coder, excited by the latest developments and features in emerging technology.&lt;/p&gt;
+&lt;p&gt;The office is located off Holloway Road.&lt;/p&gt;
+&lt;p&gt;Duties include:
+Creating and managing applications and web services
+Work well within team of designers, developers and project managers to get the best result
+Convert flat design concepts into working applications
+Extremely thorough testing of all services before being put live
+Brainstorming solutions and methods to make sure we are ahead of the competition
+Keeping up to date on news and developments related to latest technology and services&lt;/p&gt;
+
+&lt;p&gt;Python and Django: minimum 4 years of experience;
+Experience with any of the major sql services: MySQL or PostgreSQL,
+Familiarity with NoSQL and Big Data technologies
+Client side technologies and frameworks: Javascript, jQuery, HTML, CSS&lt;/p&gt;
+</description><guid>https://python.org/jobs/587/</guid></item></channel></rss>

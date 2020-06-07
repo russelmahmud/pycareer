@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load markup %}
+
+{% block meta_tag %}
+<title>Python Books | PyCareer</title>
+<meta name="description" content="{{ BOOK_COMMON_META }}">
+{% endblock %}
+
+{% block social_tag %}
+<!-- document-specific social tags -->
+<meta property="og:title" content="Python Books">
+<meta property="og:url" content="{{ SITE_URL }}{% url book_list %}">
+<meta name="twitter:url" content="{{ SITE_URL }}{% url book_list %}">
+<meta name="twitter:title" content="Python Books">
+<meta property="og:description" content="{{ BOOK_COMMON_META }}">
+<meta name="twitter:description" content="{{ BOOK_COMMON_META }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb t-small">
+      <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Books</li>
+    </ol>
+  </nav>
+  <h1 class="title t-large">Python Books</h1>
+  <hr>
+  {% include "book/_category_list.html" with books=books %}
+  <hr>
+  <nav>
+    <ul class="pagination justify-content-between">
+      {% if paginator.has_previous %}
+        <li class="page-item previous"><a class="page-link" href="?q={{ query|urlencode }}&page={{ paginator.previous_page_number }}&sort={{ request.GET.sort }}">«&nbsp;Prev</a></li>
+      {% else %}
+        <li class="page-item previous disabled"><a class="page-link" href="javascript:;" rel="nofollow">«&nbsp;Prev</a></li>
+      {% endif %}
+      {% if paginator.has_next %}
+        <li class="page-item next"><a class="page-link" href="?q={{ query|urlencode }}&page={{ paginator.next_page_number }}&sort={{ request.GET.sort }}">Next&nbsp;»</a></li>
+      {% else %}
+        <li class="page-item next disabled"><a class="page-link" href="javascript:;" rel="nofollow">Next&nbsp;»</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>
+{% endblock %}

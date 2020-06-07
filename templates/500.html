@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block meta_tag %}
+  <title>Server Error | PyCareer</title>
+{% endblock %}
+
+{% block content %}
+  <hr class="topbar">
+  <div class="container">
+    <div class="row" style="text-align: center">
+      <h1>Server Error</h1>
+      <p>There was an error while handling your request.
+        <a href="{% url contact_page %}">Contact Us</a> or
+        Return to the <a href="{% url home_page %}">Home Page</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

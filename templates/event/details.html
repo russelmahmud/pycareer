@@ -1,0 +1,154 @@
+{% extends 'event/base.html' %}
+
+{% block meta_tag %}
+  <title>{{ event.name }} | PyCareer</title>
+  <meta name="description" content="{{ event.description }}">
+{% endblock %}
+
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="{{ event.name }}">
+  <meta property="og:url" content="{{ event.full_url }}">
+  <meta name="twitter:url" content="{{ event.full_url }}">
+  <meta name="twitter:title" content="{{ event.name }}">
+  <meta property="og:description" content="{{ event.description }}">
+  <meta name="twitter:description" content="{{ event.description }}">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url event_list %}">Events</a></li>
+    <li class="breadcrumb-item " aria-current="page">{{ event.name }}</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block event-content %}
+<div class="event">
+  <h1 class="t-large title">{{ event.name }}</h1>
+  <h2 class="event-location t-medium"><i class="fa fa-map-marker"></i> {{ event.location }}</h2>
+  <div class="event-time t-medium">
+    <i class="fa fa-calendar-o"></i> {{ event.start_date|date:"d M, Y" }} - {{ event.end_date|date:"d M, Y" }}
+  </div>
+  <p class="event-description t-medium">{{ event.description|default:"" }}</p>
+  {% if event.topics %}
+    <p class="t-small"><i class="fa fa-tags"></i>&nbsp;<strong>Topics:</strong>&nbsp;{{ event.topics }}</p>
+  {% endif %}
+  {% if event.website %}
+    <p class="t-small"><i class="fa fa-link"></i>&nbsp;<strong>Website:</strong>&nbsp;<a href="{{ event.website }}">{{ event.website }}</a></p>
+  {% endif %}
+  <div class="share event-share t-small">
+    <strong>Share:</strong>
+    <ul>
+      <li><a href="http://twitter.com/share?url={{ event.full_url }}&text={{ event.name }}" data-url="{{ event.full_url }}" data-title="{{ event.name }}" class="share-link twitter">
+        <i aria-hidden="true" class="fa fa-twitter"></i>&nbsp;Twitter</a>
+      </li>
+      <li><a href="http://facebook.com/sharer.php?s=100&p[url]={{ event.full_url }}" target="_blank" data-url="{{ event.full_url }}" data-title="{{ event.name }}" class="share-link facebook">
+        <i aria-hidden="true" class="fa fa-facebook"></i>&nbsp;Facebook</a></li>
+      <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ event.full_url }}&title={{ event.name }}" target="_blank" data-url="{{ event.full_url }}" data-title="{{ event.name }}" class="share-link linkedin">
+        <i aria-hidden="true" class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+  <div id="mapid"></div>
+</div>
+{% endblock %}
+
+{% block extracss %}
+<style>
+  #mapid {
+    width: 100%;
+    margin-top: 30px;
+    height: calc(100vh - 356px);
+  }
+</style>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+  function addInfoWindow(map, marker, event) {
+    // var link = event.website || event.calender_link;
+    var message =
+    '<div class="info_content">' +
+      '<h4><a href="'+ event.url +'">' + event.name +'</a></h4>' +
+      '<strong>Start : </strong>' + event.start_date + '<br>' +
+      '<strong>End : </strong>' + event.end_date + '<br>' +
+      '<strong>Location : </strong>' + event.location +
+    '</div>';
+
+    var infoWindow = new google.maps.InfoWindow({
+      content: message
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+      infoWindow.open(map, marker);
+    });
+  }
+
+  function initMap() {
+    var center = {lat: 22.1239, lng: 7.05245};
+    var map = new google.maps.Map(document.getElementById('mapid'), {
+      zoom: 15,
+      center: center,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+      scaleControl: true,
+      streetViewControl: true,
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      }
+    });
+
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $.getJSON('/events/api/?id={{event.id}}', function(events) {
+      if (events.length == 0) {
+        return;
+      }
+      var markers = events.map(function(event, i) {
+        var marker = new google.maps.Marker({
+          position: {lat: event.lat, lng: event.lon},
+          map: map
+        });
+        addInfoWindow(map, marker, event);
+        map.setCenter(marker.getPosition());
+      });
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+</script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "name": "{{ event.name }}",
+    "startDate" : "{{ event.start_date|date:'Y-m-d' }}",
+    "endDate" : "{{ event.end_date|date:'Y-m-d' }}",
+    "url" : "{{ event.full_url }}",
+    "location" : {
+      "@type" : "Place",
+      "name" : "{{ event.location }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ event.city }}",
+        "addressRegion": "{{ event.state }}",
+        "addressCountry": "{{ event.country }}"
+      }
+    }
+  }
+  </script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% for job in jobs %}
+<div class="listing-row">
+  <h2 class="t-medium">
+    <a href="{{ job.url }}">{{ job.title }}</a>&nbsp;{% if job.will_sponsor == 'True' %}<span class="badge badge-info">Visa Sponsorship</span>{% endif %}
+  </h2>
+  <p class="t-medium">
+    <strong><i class="fa fa-map-marker"></i> {{ job.location }}</strong>
+    <br>
+    <span class="company"><i class="fa fa-building-o"></i> {{ job.company }}</span>
+  </p>
+  <p class="t-medium text-muted">{{ job.snippet|safe }}</p>
+  <p class="t-small"><i class="fa fa-clock-o"></i> Posted <strong>{{ job.relative_time }}</strong></p>
+</div>
+{% endfor %}

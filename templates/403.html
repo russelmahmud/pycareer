@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block meta_tag %}
+  <title>Forbidden | PyCareer</title>
+{% endblock %}
+
+{% block content %}
+  <hr class="topbar">
+  <div class="container">
+    <div class="row" style="text-align: center">
+      <div class="col-sm-8 col-sm-offset-2">
+        {% if messages %}
+          {% for msg in messages %}
+            {% if 'permission' in msg.tags %}
+              <p class="alert alert-danger fade in" role="alert">
+                {{ msg.message }}
+              </p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <h4>You don't have sufficient permission to view this page.</h4>
+        <a href="javascript:;" onclick="window.history.back();">Back to previous page</a>
+        <ul style="text-align: left; margin-top: 30px">
+          <li><a href="{% url registration_register %}">Register</a></li>
+          <li><a href="{% url auth_login %}">Login</a></li>
+          <li><a href="{% url job_list %}">Python Jobs</a></li>
+          <li><a href="{% url event_list %}">Python Events</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}

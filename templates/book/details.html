@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load markup %}
+
+{% block meta_tag %}
+  <title>{{ book.title }} | PyCareer</title>
+  <meta name="description" content="{{ book.description|truncatewords:40 }}">
+{% endblock %}
+{% block social_image_tag %}
+<meta property="og:image" content="{{ book.cover_url }}">
+<meta name="twitter:image" content="{{ book.cover_url }}">
+{% endblock %}
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="{{ book.title }}">
+  <meta property="og:url" content="{{ book.full_url }}">
+  <meta name="twitter:url" content="{{ book.full_url }}">
+  <meta name="twitter:title" content="{{ book.title }}">
+  <meta property="og:description" content="{{ book.description|truncatewords:40 }}">
+  <meta name="twitter:description" content="{{ book.description|truncatewords:40 }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb t-small">
+      <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+      <li class="breadcrumb-item"><a href="{% url book_list %}">Books</a></li>
+      <li class="breadcrumb-item active">{{ book.title }}</li>
+    </ol>
+  </nav>
+
+  <div class="row book-details">
+    <div class="col-md-5">
+      <a href="{{ book.amazon_link }}">
+        <img class="cover img-fluid" src="{{ book.cover_url }}" alt="{{ book.title }}">
+      </a>
+    </div>
+    <div class="book-details-info col-md-7">
+      <a class="btn btn-warning buy-btn-top btn-full-width" href="{{ book.amazon_link }}">Buy on Amazon</a>
+      <h1 class="t-large title">{{ book.title }}</h1>
+      <p class="tag-block t-medium"><strong class="text-muted">Tags: </strong>
+        {% for tag in book.tags %}
+        <a href="#">{{ tag }}</a>{%if not forloop.last%},{%endif%}
+        {% endfor %}
+      </p>
+      <p class="tag-block t-medium">
+        <strong class="text-muted">Topic: </strong><a href="#">{{ book.category.name }}</a>
+      </p>
+      <ul class="list-unstyled t-medium">
+        <li><strong class="text-muted">By: </strong><strong class="list-value">{{ book.authors }}</strong></li>
+        <li><strong class="text-muted">Publisher: </strong><strong class="list-value">{{ book.publisher }}</strong></li>
+        <li><strong class="text-muted">Publication Date: </strong><strong class="list-value">{{ book.publication_date|default:"" }}</strong></li>
+        <li><strong class="text-muted">Format: </strong><strong class="list-value">{% if book.book_format %}{{ book.book_format }}, {% endif %} {% if book.page_count %}{{ book.page_count }} pages{% endif %}</strong></li>
+        <li><strong class="text-muted">Language: </strong><strong class="list-value">{{ book.language }}</strong></li>
+      </ul>
+      <div class="price-block t-medium">
+        <span class="price-new">${{ book.price }}</span>
+      </div>
+      <article class="product-details-article t-medium">
+        <strong class="tag-block t-medium text-muted">Description</strong>
+        <p>{{ book.description|markdown:"safe" }}</p>
+      </article>
+      <a class="btn btn-warning btn-full-width" href="{{ book.amazon_link }}">Buy on Amazon</a>
+      <div class="share t-small mt-3">
+        <strong>Share:</strong>
+        <ul>
+          <li><a href="http://twitter.com/share?url={{ book.full_url }}&text={{ book.title }}" data-url="{{ book.full_url }}" data-title="{{ book.title }}" class="share-link twitter">
+            <i aria-hidden="true" class="fa fa-twitter"></i>&nbsp;Twitter</a>
+          </li>
+          <li><a href="http://facebook.com/sharer.php?s=100&p[url]={{ book.full_url }}" target="_blank" data-url="{{ book.full_url }}" data-title="{{ book.title }}" class="share-link facebook">
+            <i aria-hidden="true" class="fa fa-facebook"></i>&nbsp;Facebook</a>
+          </li>
+          <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ book.full_url }}&title={{ book.title }}" target="_blank" data-url="{{ book.full_url }}" data-title="{{ book.title }}" class="share-link linkedin">
+            <i aria-hidden="true" class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <h2 class="t-large category-title">
+    Related Books
+    <span class="t-medium pull-right">
+      <a href="{% url book_list %}">See All</a>
+    </span>
+  </h2>
+  <hr>
+  {% include "book/_category_list.html" with books=related_books %}
+</div>
+{% endblock %}

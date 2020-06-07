@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block meta_tag %}
+  <title>Contact Us | PyCareer</title>
+{% endblock %}
+
+{% block social_tag %}
+  <meta property="og:title" content="Contact Us">
+  <meta property="og:url" content="{{ SITE_URL }}{% url contact_page %}">
+  <meta name="twitter:url" content="{{ SITE_URL }}{% url contact_page %}">
+  <meta name="twitter:title" content="Contact Us">
+  <meta property="og:description" content="Do you have any feedback? Please use this form to send your positive or negative feedback, random ideas or report a bug. We’ll get back to you as soon as possible.">
+  <meta name="twitter:description" content="Do you have any feedback? Please use this form to send your positive or negative feedback, random ideas or report a bug. We’ll get back to you as soon as possible.">
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h1 class="t-large">Contact us</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-8">
+        {% include 'partials/inline_message.html' with messages=messages filter='contact' %}
+        <form class="form" role="form" action="{% url contact_page %}" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="name">Name <span class="required">*</span></label>
+                      {{ form.name }}
+                      {{ form.name.errors }}
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="email">Email <span class="required">*</span></label>
+                      {{ form.email }}
+                      {{ form.email.errors }}
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="comment">Your comments <span class="required">*</span></label>
+                      {{ form.comment }}
+                      {{ form.comment.errors }}
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-3">
+        <h2 class="t-medium">Contacts</h2>
+        <a class="t-small" href="mailto:support@pycareer.com"><i class="fa fa-envelope fa-2"></i>&nbsp;&nbsp;support@pycareer.com</a><br>
+        <h2 class="t-medium">Feedback</h2>
+        <p class="t-small">Do you have any feedback? Please use this form to send your positive or negative feedback, random ideas or report a bug. We’ll get back to you as soon as possible.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'job/base.html' %}
+{% load markup %}
+
+{% block meta_tag %}
+  <title>{{ job.title }} | PyCareer</title>
+  <meta name="description" content="{{ job.description|truncatewords:40 }}">
+{% endblock %}
+
+{% block social_tag %}
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="{{ job.title }}">
+  <meta property="og:url" content="{{ job.full_url }}">
+  <meta name="twitter:url" content="{{ job.full_url }}">
+  <meta name="twitter:title" content="{{ job.title }}">
+  <meta property="og:description" content="{{ job.description|truncatewords:40 }}">
+  <meta name="twitter:description" content="{{ job.description|truncatewords:40 }}">
+{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb t-small">
+    <li class="breadcrumb-item"><a href="{% url home_page %}"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url job_list %}">Jobs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ job.title }}</li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block job-content %}
+  <div class="job">
+    <h1 class="title t-large">{{ job.title }}&nbsp;{% if job.will_sponsor %}<span class="badge badge-info">Visa Sponsorship</span>&nbsp;<span class="badge">{{ job.visas }}</span>{% endif %}</h1>
+    {% if job.is_owner %}
+      <p class="t-small"><a href="{% url job_update job.id %}" class="btn btn-warning">Edit your listing</a></p>
+    {% endif %}
+    <h2 class="location t-medium"><i class="fa fa-map-marker"></i> {{ job.location }}</h2>
+    <div class="company t-medium"><i class="fa fa-building"></i> {{ job.company_name }}</div>
+    <hr>
+    <div class="description t-medium">
+      {{ job.description|markdown:"safe" }}
+      {% if job.company_description %}
+        <h2>About the Company</h2>
+        {{ job.company_description }}
+      {% endif %}
+    </div>
+    {% if job.provider_link %}
+      <a href="{{ job.provider_link }}" target="_blank">Source</a>
+    {% endif %}
+    <div class="share t-small">
+      <strong>Share:</strong>
+      <ul>
+        <li><a href="http://twitter.com/share?url={{ job.full_url }}&text={{ job.title }}" data-url="{{ job.full_url }}" data-title="{{ job.title }}" class="share-link twitter">
+          <i aria-hidden="true" class="fa fa-twitter"></i>&nbsp;Twitter</a>
+        </li>
+        <li><a href="http://facebook.com/sharer.php?s=100&p[url]={{ job.full_url }}" target="_blank" data-url="{{ job.full_url }}" data-title="{{ job.title }}" class="share-link facebook">
+          <i aria-hidden="true" class="fa fa-facebook"></i>&nbsp;Facebook</a>
+        </li>
+        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ job.full_url }}&title={{ job.title }}" target="_blank" data-url="{{ job.full_url }}" data-title="{{ job.title }}" class="share-link linkedin">
+          <i aria-hidden="true" class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div class="meta-tags t-small">
+      <p><i class="fa fa-clock-o"></i>&nbsp;<strong>Posted at:</strong> {{ job.published_at|date }}</p>
+      {% if is_production %}
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Link-Add-Job-Apply-Button -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-4848904033199885"
+          data-ad-slot="5755772568"
+          data-ad-format="link"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      {% endif %}
+      <button class="apply-btn btn btn-primary btn-full-width">See How To Apply</button>
+      <div class="contact-info"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+  $('.apply-btn').on('click', function(event) {
+    $(this).prop('disabled', true);
+    $(this).prepend('<i class="fa fa-spinner fa-spin"></i>');
+    $('.contact-info').load('/jobs/{{ job.id }}/contact-info/', function(response, status, xhr) {
+      if(xhr.status == 200) {
+        $('.apply-btn').remove();
+      }
+    });
+  });
+</script>
+{% endblock %}

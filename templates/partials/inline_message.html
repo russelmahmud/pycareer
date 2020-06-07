@@ -1,0 +1,10 @@
+{% for msg in messages %}
+  {% if filter and filter in msg.tags %}
+  <div class="alert alert-{{ msg.level_tag }} fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ msg.message }}
+  </div>
+  {% endif %}
+{% endfor %}

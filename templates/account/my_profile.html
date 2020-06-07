@@ -1,0 +1,69 @@
+{% extends "account/base.html" %}
+
+{% block account_content %}
+<div class="row">
+  <div class="col-md-10 mx-auto form-page">
+    <h1 class="t-large">My Profile</h1>
+    <hr>
+    {% include 'partials/inline_message.html' with messages=messages filter='profile' %}
+    <form class="form form-vertical" action="." method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset>
+        {% if request.user.get_profile.type == 'recruiter' %}
+          {% include "account/_recruiter_profile_form.html" %}
+        {% elif request.user.get_profile.type == 'developer' %}
+          {% include "account/_developer_profile_form.html" %}
+        {% endif %}
+      </fieldset>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+  <script src="/static/js/tinymce/tinymce.min.js"></script>
+  <script src="/static/js/bootstrap-tagsinput.min.js"></script>
+  <script src="/static/js/typeahead.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      tinymce.init({
+        selector: '#summary',
+        menubar: false,
+        toolbar: 'bold | italic | bullist | preview',
+        plugins: 'lists preview',
+        statusbar: true
+      });
+
+      var skills = new Bloodhound({
+        limit: 10,
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: {
+          url: '/account/skill-autocomplete/?q=%QUERY',
+          wildcard: '%QUERY'
+        }
+      });
+      skills.initialize();
+
+      var tagsElement = $('.tagsinput-typeahead');
+      tagsElement.tagsinput({
+        maxTags: 10,
+        maxChars: 20,
+        trimValue: true,
+        tagClass: 'label label-default',
+        typeaheadjs: {
+          name: 'skills',
+          displayKey: 'name',
+          valueKey: 'name',
+          source: skills.ttAdapter()
+        }
+      });
+      tagsElement.on('itemAdded', function() {
+        console.log('Added', tagsElement.val());
+      });
+      tagsElement.on('itemRemoved', function(event) {
+        console.log('event', event, tagsElement.val());
+      });
+    });
+  </script>
+{% endblock %}
