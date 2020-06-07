@@ -1,6 +1,6 @@
 feedparser==5.2.1
 python-dateutil==2.4.2
-marshmallow==2.0.0b3
+marshmallow==2.15.1
 django-registration==1.0
 html2text==2015.11.4
 Markdown==2.6.4
